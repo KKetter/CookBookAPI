@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CookBookAPI.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,14 @@ namespace CookBookAPI.Data
 
         }
 
-        DbSet<RecipieIngredients> RecipieIngredients { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<RecipeIngredients>().HasKey(hr => new { hr.RecipeID, hr.IngredientsID, });
+
+            modelBuilder.Entity<Instructions>().HasKey(hr => new { hr.RecipeID, hr.StepNumberID, });
+
+        }
+
+        DbSet<RecipeIngredients> RecipeIngredients { get; set; }
     }
 }
