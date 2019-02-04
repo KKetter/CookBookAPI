@@ -3,10 +3,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CookBookAPI.Models
 {
-    public class RecipieIngredients
+    public class RecipeIngredients
     {
         [Required]
-        public int RecipieID { get; set; }
+        public int RecipeID { get; set; }
         [Required]
         public int IngredientsID { get; set; }
         [Column(TypeName = "varchar(max)")]
@@ -14,8 +14,8 @@ namespace CookBookAPI.Models
         public string Quantity { get; set; }
 
         //Navigation Properties
-        public int Recipe { get; set; }
-        public int Ingredients { get; set; }
-
+        public Recipes Recipe { get; set; }
+        public Ingredients Ingredients { get; set; }
+        
     }
 }

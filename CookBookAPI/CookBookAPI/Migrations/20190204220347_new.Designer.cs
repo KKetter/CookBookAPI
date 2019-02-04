@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CookBookAPI.Migrations
 {
     [DbContext(typeof(CookBookDbContext))]
-    [Migration("20190204211156_starting")]
-    partial class starting
+    [Migration("20190204220347_new")]
+    partial class @new
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,32 +20,22 @@ namespace CookBookAPI.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("CookBookAPI.Models.Ingredients", b =>
+            modelBuilder.Entity("CookBookAPI.Models.RecipeIngredients", b =>
                 {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Name")
-                        .HasColumnType("varchar(max)");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("Ingredients");
-                });
-
-            modelBuilder.Entity("CookBookAPI.Models.RecipieIngredients", b =>
-                {
-                    b.Property<int>("RecipieID");
+                    b.Property<int>("RecipeID");
 
                     b.Property<int>("IngredientsID");
+
+                    b.Property<int>("Ingredients");
 
                     b.Property<string>("Quantity")
                         .HasColumnType("varchar(max)");
 
-                    b.HasKey("RecipieID", "IngredientsID");
+                    b.Property<int>("Recipes");
 
-                    b.ToTable("RecipieIngredients");
+                    b.HasKey("RecipeID", "IngredientsID");
+
+                    b.ToTable("RecipeIngredients");
                 });
 #pragma warning restore 612, 618
         }

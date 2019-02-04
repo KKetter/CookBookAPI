@@ -17,12 +17,12 @@ namespace CookBookAPI.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<RecipieIngredients>().HasKey(hr => new { hr.RecipieID, hr.IngredientsID});
+            modelBuilder.Entity<RecipeIngredients>().HasKey(hr => new { hr.RecipeID, hr.IngredientsID, });
+
+            modelBuilder.Entity<Instructions>().HasKey(hr => new { hr.RecipeID, hr.StepNumberID, });
+
         }
 
-        DbSet<RecipieIngredients> RecipieIngredients { get; set; }
-        DbSet<Ingredients> Ingredients { get; set; }
-        DbSet<Recipes> Recipes { get; set; }
-        DbSet<Instructions> Instructions { get; set; }
+        DbSet<RecipeIngredients> RecipeIngredients { get; set; }
     }
 }

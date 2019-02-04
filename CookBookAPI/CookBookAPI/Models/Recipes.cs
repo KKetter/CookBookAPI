@@ -12,6 +12,6 @@ namespace CookBookAPI.Models
 
         // Navigation
         public Instructions InstructionID { get; set; }
-        public RecipieInredients IngredientID { get; set; }
+        public RecipeIngredients IngredientID { get; set; }
     }
 }

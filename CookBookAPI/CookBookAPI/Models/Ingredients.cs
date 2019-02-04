@@ -11,7 +11,8 @@ namespace CookBookAPI.Models
         public string Name { get; set; }
 
         //Navigation Properties
-        public int RecipeIngredients { get; set; }
-        
+        public RecipeIngredients Recipe { get; set; }
+        public Ingredients Ingredient { get; set; }
+
     }
 }

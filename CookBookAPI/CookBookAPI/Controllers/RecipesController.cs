@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CookBookAPI.Data;
-using Microsoft.AspNetCore.Http;
+﻿using CookBookAPI.Data;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CookBookAPI.Controllers

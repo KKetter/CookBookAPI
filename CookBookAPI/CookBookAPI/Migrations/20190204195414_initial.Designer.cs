@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CookBookAPI.Migrations
 {
-    [DbContext(typeof(CookBookDBContext))]
+    [DbContext(typeof(CookBookDbContext))]
     [Migration("20190204195414_initial")]
     partial class initial
     {
