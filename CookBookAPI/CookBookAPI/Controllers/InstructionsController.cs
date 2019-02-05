@@ -37,12 +37,14 @@ namespace CookBookAPI.Controllers
         /// <summary>
         /// Returns a specific recipe instructions requested by recipe ID
         /// </summary>
-        /// <param name="id">RecipeID property</param>
+        /// <param name="recID">RecipeID property</param>
+        /// <param name="stepID">StepNumberID property</param>
         /// <returns>Matching instructions object if found</returns>
-        [HttpGet("{id}")]
-        public IActionResult Get(int id)
+        [HttpGet("{recID}/{stepID}")]
+        public IActionResult Get([FromRoute] int recID, [FromRoute] int stepID)
         {
-            Instructions instruction = _context.Instructions.FirstOrDefault(i => i.RecipeID == id);
+            Instructions instruction = _context.Instructions
+                .FirstOrDefault(i => i.RecipeID == recID && i.StepNumberID == stepID);
             if (instruction == null)
             {
                 return NotFound();
@@ -78,15 +80,16 @@ namespace CookBookAPI.Controllers
         /// <param name="id">RecipeID property</param>
         /// <param name="instruction">Instructions object with edited data</param>
         /// <returns>Edited or new recipe instructions</returns>
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Put([FromRoute] int id, [FromBody]Instructions instruction)
+        [HttpPut("{recID}/{stepID}")]
+        public async Task<IActionResult> Put([FromRoute] int recID, [FromRoute] int stepID, [FromBody]Instructions instruction)
         {
-            if (instruction.RecipeID != id)
+            if (instruction.RecipeID != recID || instruction.StepNumberID != stepID)
             {
                 return BadRequest(ModelState);
             }
 
-            Instructions result = _context.Instructions.FirstOrDefault(i => i.RecipeID == id);
+            Instructions result = _context.Instructions
+                .FirstOrDefault(i => i.RecipeID == recID && i.StepNumberID == stepID);
             if (result == null)
             {
                 return RedirectToAction("Post", instruction);
@@ -107,10 +110,11 @@ namespace CookBookAPI.Controllers
         /// </summary>
         /// <param name="id">RecipeID property</param>
         /// <returns>Successful response or not found</returns>
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete([FromRoute] int id)
+        [HttpDelete("{recID}/{stepID}")]
+        public async Task<IActionResult> Delete([FromRoute] int recID, [FromRoute] int stepID)
         {
-            var instruction = _context.Instructions.FirstOrDefault(i => i.RecipeID == id);
+            var instruction = _context.Instructions
+                .FirstOrDefault(i => i.RecipeID == recID && i.StepNumberID == stepID);
 
             if (instruction == null)
             {
