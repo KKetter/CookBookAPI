@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
 
 namespace CookBookAPI.Controllers
 {
@@ -12,10 +13,12 @@ namespace CookBookAPI.Controllers
     public class IngredientsController : ControllerBase
     {
         private readonly CookBookDbContext _context;
+        private readonly IConfiguration Configuration;
 
-        public IngredientsController(CookBookDbContext context)
+        public IngredientsController(CookBookDbContext context, IConfiguration configuration)
         {
             _context = context;
+            Configuration = configuration;
         }
 
         // GET
