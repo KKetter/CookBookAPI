@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CookBookAPI.Data;
 using CookBookAPI.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 
 namespace CookBookAPI.Controllers
 {
@@ -14,10 +13,12 @@ namespace CookBookAPI.Controllers
     public class RecipesController : ControllerBase
     {
         private readonly CookBookDbContext _context;
+        private readonly IConfiguration Configuration;
 
-        public RecipesController(CookBookDbContext context)
+        public RecipesController(CookBookDbContext context, IConfiguration configuration)
         {
             _context = context;
+            Configuration = configuration;
         }
 
         // GET
