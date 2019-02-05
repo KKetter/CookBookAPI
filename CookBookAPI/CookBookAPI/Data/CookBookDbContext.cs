@@ -23,6 +23,9 @@ namespace CookBookAPI.Data
 
         }
 
-        DbSet<RecipeIngredients> RecipeIngredients { get; set; }
+        public DbSet<RecipeIngredients> RecipeIngredients { get; set; }
+        public DbSet<Ingredients> Ingredients { get; set; }
+        public DbSet<Recipes> Recipes { get; set; }
+        public DbSet<Instructions> Instructions { get; set; }
     }
 }
