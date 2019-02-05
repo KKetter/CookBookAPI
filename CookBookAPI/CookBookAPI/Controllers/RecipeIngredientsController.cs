@@ -38,7 +38,7 @@ namespace CookBookAPI.Controllers
         /// <param name="recID">RecipeID property</param>
         /// <param name="ingID">IngredientID property</param>
         /// <returns>Matching recipe ingredient if found</returns>
-        [HttpGet("{recID}")]
+        [HttpGet("{recID}/{ingID}")]
         public IActionResult Get(int recID, int ingID)
         {
             RecipeIngredients RecIng = _context.RecipeIngredients
@@ -80,7 +80,7 @@ namespace CookBookAPI.Controllers
         /// <param name="ingID">IngredientID property</param>
         /// <param name="recIng">Recipe ingredient object with edited data</param>
         /// <returns>Updated or new recipe ingredient</returns>
-        [HttpPut("{recID}")]
+        [HttpPut("{recID}/{ingID}")]
         public async Task<IActionResult> Put([FromRoute] int recID, int ingID, [FromBody]RecipeIngredients recIng)
         {
             if (recIng.RecipeID != recID || recIng.IngredientsID != ingID)
