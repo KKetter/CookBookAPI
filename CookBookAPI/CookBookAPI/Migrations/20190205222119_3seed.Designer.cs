@@ -3,14 +3,16 @@ using CookBookAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CookBookAPI.Migrations
 {
     [DbContext(typeof(CookBookDbContext))]
-    partial class CookBookDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190205222119_3seed")]
+    partial class _3seed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
