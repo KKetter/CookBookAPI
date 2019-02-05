@@ -15,7 +15,7 @@ namespace CookBookAPI.Models
 
         //Navigation Properties
         public Recipes Recipe { get; set; }
-        public Ingredients Ingredients { get; set; }
+        public Ingredients Ingredient { get; set; }
         
     }
 }
