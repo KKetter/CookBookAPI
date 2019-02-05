@@ -39,7 +39,7 @@ namespace CookBookAPI.Controllers
         /// <param name="ingID">IngredientID property</param>
         /// <returns>Matching recipe ingredient if found</returns>
         [HttpGet("{recID}/{ingID}")]
-        public IActionResult Get(int recID, int ingID)
+        public IActionResult Get([FromRoute] int recID, [FromRoute] int ingID)
         {
             RecipeIngredients RecIng = _context.RecipeIngredients
                 .FirstOrDefault(i => i.RecipeID == recID && i.IngredientsID == ingID);
@@ -81,7 +81,7 @@ namespace CookBookAPI.Controllers
         /// <param name="recIng">Recipe ingredient object with edited data</param>
         /// <returns>Updated or new recipe ingredient</returns>
         [HttpPut("{recID}/{ingID}")]
-        public async Task<IActionResult> Put([FromRoute] int recID, int ingID, [FromBody]RecipeIngredients recIng)
+        public async Task<IActionResult> Put([FromRoute] int recID, [FromRoute] int ingID, [FromBody]RecipeIngredients recIng)
         {
             if (recIng.RecipeID != recID || recIng.IngredientsID != ingID)
             {
@@ -96,6 +96,7 @@ namespace CookBookAPI.Controllers
 
             result.RecipeID = recIng.RecipeID;
             result.IngredientsID = recIng.IngredientsID;
+            result.Quantity = recIng.Quantity;
 
             _context.Update(result);
             await _context.SaveChangesAsync();
@@ -109,8 +110,8 @@ namespace CookBookAPI.Controllers
         /// <param name="recID">RecipeID property</param>
         /// <param name="ingID">IngredientID property</param>
         /// <returns>Successful response or not found</returns>
-        [HttpDelete("{recID}")]
-        public async Task<IActionResult> Delete([FromRoute] int recID, int ingID)
+        [HttpDelete("{recID}/{ingID}")]
+        public async Task<IActionResult> Delete([FromRoute] int recID, [FromRoute] int ingID)
         {
             var recIng = _context.RecipeIngredients
                 .FirstOrDefault(i => i.RecipeID == recID && i.IngredientsID == ingID);
