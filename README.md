@@ -21,3 +21,12 @@ Instructions
 - RecipeID (Composite Key)
 - StepNumber (Composite Key) - The number of steps associated with each of their instructions in a given recipe
 - Action - The instructions of a specific step in a given recipe
+
+# Sample API Outputs (Swagger)
+![Instructions Table](https://app.swaggerhub.com/apis/CookBookAPI7/CookBookInstructions/1.0.0)
+
+![Recipe Ingredients Table](https://app.swaggerhub.com/apis/CookBookAPI7/CookBookRecipeIngredients/1.0.0)
+
+![Ingredients Table](https://app.swaggerhub.com/apis/CookBookAPI7/CookBookIngredients/1.0.0)
+
+![Recipe Table](https://app.swaggerhub.com/apis/CookBookAPI7/CookBookRecipe/1.0.0)
