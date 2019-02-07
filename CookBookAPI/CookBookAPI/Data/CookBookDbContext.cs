@@ -38,6 +38,18 @@ namespace CookBookAPI.Data
                     ID = 3,
                     Name = "Buffalo Chicken Meatloaf Cupcakes",
                     ImageURL = "https://goo.gl/images/JkTjTQ"
+                },
+                new Recipes()
+                {
+                    ID = 4,
+                    Name = "Baked Mac N Cheese",
+                    ImageURL = "https://goo.gl/images/MNwsmA"
+                },
+                new Recipes()
+                {
+                    ID = 5,
+                    Name = "Dumplings",
+                    ImageURL = "https://images.media-allrecipes.com/userphotos/720x405/5011529.jpg"
                 }
             );
 
@@ -176,6 +188,61 @@ namespace CookBookAPI.Data
                 {
                     ID = 27,
                     Name = "Blue Cheese",
+                },
+                new Ingredients()
+                {
+                    ID = 28,
+                    Name = "Elbow Pasta",
+                },
+                new Ingredients()
+                {
+                    ID = 29,
+                    Name = "Unsalted Butter",
+                },
+                new Ingredients()
+                {
+                    ID = 30,
+                    Name = "All Purpose Flour",
+                },
+                new Ingredients()
+                {
+                    ID = 31,
+                    Name = "Whole Milk",
+                },
+                new Ingredients()
+                {
+                    ID = 32,
+                    Name = "Half and Half",
+                },
+                new Ingredients()
+                {
+                    ID = 33,
+                    Name = "Medium Sharp Cheddar Cheese",
+                },
+                new Ingredients()
+                {
+                    ID = 34,
+                    Name = "Gruyere Cheese",
+                },
+                new Ingredients()
+                {
+                    ID = 35,
+                    Name = "Black Pepper",
+                },
+                new Ingredients()
+                {
+                    ID = 36,
+                    Name = "Paprika",
+                },
+                new Ingredients()
+                {
+                    ID = 37,
+                    Name = "Baking Powder",
+                },
+                new Ingredients()
+                {
+                    ID = 38,
+                    Name = "Granulated Sugar",
                 }
             );
 
@@ -371,6 +438,102 @@ namespace CookBookAPI.Data
                     RecipeID = 3,
                     IngredientsID = 27,
                     Quantity = "2 ounces"
+                },
+                new RecipeIngredients()
+                {
+                    RecipeID = 4,
+                    IngredientsID = 28,
+                    Quantity = "1 pound"
+                },
+                new RecipeIngredients()
+                {
+                    RecipeID = 4,
+                    IngredientsID = 29,
+                    Quantity = "1 stick"
+                },
+                new RecipeIngredients()
+                {
+                    RecipeID = 4,
+                    IngredientsID = 30,
+                    Quantity = "1/2 cup"
+                },
+                new RecipeIngredients()
+                {
+                    RecipeID = 4,
+                    IngredientsID = 31,
+                    Quantity = "1 and 1/2 cups"
+                },
+                new RecipeIngredients()
+                {
+                    RecipeID = 4,
+                    IngredientsID = 32,
+                    Quantity = "2 and 1/2 cups"
+                },
+                new RecipeIngredients()
+                {
+                    RecipeID = 4,
+                    IngredientsID = 33,
+                    Quantity = "4 cups grated"
+                },
+                new RecipeIngredients()
+                {
+                    RecipeID = 4,
+                    IngredientsID = 34,
+                    Quantity = "2 cups grated"
+                },
+                new RecipeIngredients()
+                {
+                    RecipeID = 4,
+                    IngredientsID = 13,
+                    Quantity = "1/2 tbsp"
+                },
+                new RecipeIngredients()
+                {
+                    RecipeID = 4,
+                    IngredientsID = 35,
+                    Quantity = "1/2 tsp"
+                },
+                new RecipeIngredients()
+                {
+                    RecipeID = 4,
+                    IngredientsID = 36,
+                    Quantity = "1/4 tsp"
+                },
+                new RecipeIngredients()
+                {
+                    RecipeID = 5,
+                    IngredientsID = 17,
+                    Quantity = "1 cup"
+                },
+                new RecipeIngredients()
+                {
+                    RecipeID = 5,
+                    IngredientsID = 37,
+                    Quantity = "2 tsp"
+                },
+                new RecipeIngredients()
+                {
+                    RecipeID = 5,
+                    IngredientsID = 38,
+                    Quantity = "1 tsp"
+                },
+                new RecipeIngredients()
+                {
+                    RecipeID = 5,
+                    IngredientsID = 13,
+                    Quantity = "1/2 tsp"
+                },
+                new RecipeIngredients()
+                {
+                    RecipeID = 5,
+                    IngredientsID = 14,
+                    Quantity = "1 tbsp"
+                },
+                new RecipeIngredients()
+                {
+                    RecipeID = 5,
+                    IngredientsID = 31,
+                    Quantity = "1/2 cup"
                 }
             );
 
@@ -440,6 +603,72 @@ namespace CookBookAPI.Data
                     RecipeID = 3,
                     StepNumberID = 5,
                     Action = "Spray the compartments of a cupcake tin with cooking spray. Add about 2 tablespoons of meatloaf mixture per well, then press a space into the center of each one for the fillings. Add blue cheese and top with a slice of butter. Top with the remaining meat and brush the wing sauce on top. Transfer the tray to the oven and bake. Brush more sauce on top every ten minutes, baking for 25 minutes."
+                },
+                new Instructions()
+                {
+                    RecipeID = 4,
+                    StepNumberID = 1,
+                    Action = "Preheat oven to 325 degrees F and grease a 3 qt baking dish (9x13). Set aside."
+                },
+                new Instructions()
+                {
+                    RecipeID = 4,
+                    StepNumberID = 2,
+                    Action = "Bring a large pot of salted water to a boil.  When boiling, add dried pasta and cook 1 minute less than the package directs for al dente.  Drain and drizzle with a little bit of olive oil to keep from sticking."
+                },
+                new Instructions()
+                {
+                    RecipeID = 4,
+                    StepNumberID = 3,
+                    Action = "While water is coming up to a boil, grate cheeses and toss together to mix, then divide into three piles.  Approximately 3 cups for the sauce, 1 1/2 cups for the inner layer, and 1 1/2 cups for the topping."
+                },
+                new Instructions()
+                {
+                    RecipeID = 4,
+                    StepNumberID = 4,
+                    Action = "Melt butter in a large saucepan over MED heat.  Sprinkle in flour and whisk to combine.  Mixture will look like very wet sand.  Cook for approximately 1 minute, whisking often.  Slowly pour in about 2 cups or so of the milk/half and half, while whisking constantly, until smooth.  Slowly pour in the remaining milk/half and half, while whisking constantly, until combined and smooth."
+                },
+                new Instructions()
+                {
+                    RecipeID = 4,
+                    StepNumberID = 5,
+                    Action = "Continue to heat over MED heat, whisking very often, until thickened to a very thick consistency.  It should almost be the consistency of a semi thinned out condensed soup."
+                },
+                new Instructions()
+                {
+                    RecipeID = 4,
+                    StepNumberID = 6,
+                    Action = "Stir in spices and 1 1/2 cups of the cheeses, stirring to melt and combine.  Stir in another 1 1/2 cups of cheese, and stir until completely melted and smooth."
+                },
+                new Instructions()
+                {
+                    RecipeID = 4,
+                    StepNumberID = 7,
+                    Action = "In a large mixing bowl, combine drained pasta with cheese sauce, stirring to combine fully.  Pour half of the pasta mixture into the prepared baking dish.  Top with 1 1/2 cups of grated cheeses, then top that with the remaining pasta mixture."
+                },
+                new Instructions()
+                {
+                    RecipeID = 4,
+                    StepNumberID = 8,
+                    Action = "Sprinkle the top with the last 1 1/2 cups of cheese and bake for 15 minutes, until cheesy is bubbly and lightly golden brown."
+                },
+                new Instructions()
+                {
+                    RecipeID = 5,
+                    StepNumberID = 1,
+                    Action = "Stir together flour, baking powder, sugar, and salt in medium size bowl. Cut in butter until crumbly. Stir in milk to make a soft dough."
+                },
+                new Instructions()
+                {
+                    RecipeID = 5,
+                    StepNumberID = 2,
+                    Action = "Drop by spoonfuls into boiling stew. Cover and simmer 15 minutes without lifting lid. Serve."
+                },
+                new Instructions()
+                {
+                    RecipeID = 5,
+                    StepNumberID = 3,
+                    Action = "To make parsley dumplings, add 1 tablespoon parsley flakes to the dry ingredients."
                 }
             );
         }
