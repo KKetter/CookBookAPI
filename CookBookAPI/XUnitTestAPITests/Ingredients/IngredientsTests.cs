@@ -225,6 +225,35 @@ namespace XUnitTestAPITests
                 Assert.IsType<OkObjectResult>(data);
             }
         }
+        [Fact]
+        public async void CanGetCollectionOfIngredients()
+        {
+            DbContextOptions<CookBookDbContext> options = new DbContextOptionsBuilder<CookBookDbContext>().UseInMemoryDatabase("CanGetCollectionOfIngredients").Options;
+
+            using (CookBookDbContext context = new CookBookDbContext(options))
+            {
+                //Arrange
+                Ingredients ingredient = new Ingredients();
+                ingredient.ID = 1;
+                ingredient.Name = "Swag";
+                Ingredients ingredient2 = new Ingredients();
+                ingredient2.ID = 2;
+                ingredient2.Name = "Energy";
+                Ingredients ingredient3 = new Ingredients();
+                ingredient3.ID = 3;
+                ingredient3.Name = "Heart";
+
+                //Act
+                IngredientsController ingredientsController = new IngredientsController(context, configuration);
+                await ingredientsController.Post(ingredient);
+                await ingredientsController.Post(ingredient2);
+                await ingredientsController.Post(ingredient3);
+                var data = ingredientsController.Get().ToList();
+
+                //Assert
+                Assert.Equal(3, data.Count);
+            }
+        }
 
     }
 }
