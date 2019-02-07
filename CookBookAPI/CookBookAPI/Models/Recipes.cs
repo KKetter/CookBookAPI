@@ -9,6 +9,7 @@ namespace CookBookAPI.Models
     {
         public int ID { get; set; }
         public string Name { get; set; }
+        public string ImageURL { get; set; }
 
         // Navigation
         public ICollection<Instructions> InstructionID { get; set; }
