@@ -23,10 +23,18 @@ Instructions
 - Action - The instructions of a specific step in a given recipe
 
 # Sample API Outputs (Swagger)
-![Instructions Table](https://app.swaggerhub.com/apis/CookBookAPI7/CookBookInstructions/1.0.0)
 
-![Recipe Ingredients Table](https://app.swaggerhub.com/apis/CookBookAPI7/CookBookRecipeIngredients/1.0.0)
+https://cookbookapi20190205105239.azurewebsites.net/api/Ingredients
+![All Ingredients](https://github.com/KKetter/CookBookAPI/blob/master/assets/api-ingredients.jpeg)
 
-![Ingredients Table](https://app.swaggerhub.com/apis/CookBookAPI7/CookBookIngredients/1.0.0)
+https://cookbookapi20190205105239.azurewebsites.net/api/Ingredients/2
+![Single Ingredient](https://github.com/KKetter/CookBookAPI/blob/master/assets/api-ingredients-2.jpeg)
 
-![Recipe Table](https://app.swaggerhub.com/apis/CookBookAPI7/CookBookRecipe/1.0.0)
+https://cookbookapi20190205105239.azurewebsites.net/api/Instructions/2/3
+![Single Instruction](https://github.com/KKetter/CookBookAPI/blob/master/assets/api-instructions-2-3.jpeg)
+
+https://cookbookapi20190205105239.azurewebsites.net/api/RecipeIngredients/1/5
+![Recipe Ingredient Deletion](https://github.com/KKetter/CookBookAPI/blob/master/assets/api-recipe-ingredients-1-5.jpeg)
+
+https://cookbookapi20190205105239.azurewebsites.net/api/Recipes
+![All Recipes](https://github.com/KKetter/CookBookAPI/blob/master/assets/api-recipes.jpeg)
