@@ -27,24 +27,24 @@ Instructions
 https://cookbookapi20190205105239.azurewebsites.net/api/Ingredients
 
 
-![All Ingredients](https://github.com/KKetter/CookBookAPI/blob/master/assets/api-ingredients.jpg)
+![All Ingredients](https://github.com/KKetter/CookBookAPI/blob/master/assets/api-ingredients.JPG)
 
 https://cookbookapi20190205105239.azurewebsites.net/api/Ingredients/2
 
 
-![Single Ingredient](https://github.com/KKetter/CookBookAPI/blob/master/assets/api-ingredients-2.jpg)
+![Single Ingredient](https://github.com/KKetter/CookBookAPI/blob/master/assets/api-ingredients-2.JPG)
 
 https://cookbookapi20190205105239.azurewebsites.net/api/Instructions/2/3
 
 
-![Single Instruction](https://github.com/KKetter/CookBookAPI/blob/master/assets/api-instructions-2-3.jpg)
+![Single Instruction](https://github.com/KKetter/CookBookAPI/blob/master/assets/api-instructions-2-3.JPG)
 
 https://cookbookapi20190205105239.azurewebsites.net/api/RecipeIngredients/1/5
 
 
-![Recipe Ingredient Deletion](https://github.com/KKetter/CookBookAPI/blob/master/assets/api-recipe-ingredients-1-5.jpg)
+![Recipe Ingredient Deletion](https://github.com/KKetter/CookBookAPI/blob/master/assets/api-recipe-ingredients-1-5.JPG)
 
 https://cookbookapi20190205105239.azurewebsites.net/api/Recipes
 
 
-![All Recipes](https://github.com/KKetter/CookBookAPI/blob/master/assets/api-recipes.jpg)
+![All Recipes](https://github.com/KKetter/CookBookAPI/blob/master/assets/api-recipes.JPG)
